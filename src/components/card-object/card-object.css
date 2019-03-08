@@ -1,0 +1,27 @@
+.container {
+  display: block;
+}
+.card-object {
+  background-color: var(--color-dark);
+  display: flex;
+  border-radius: 8px;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  padding: 16px;
+  color: var(--color-white);
+}
+
+.card-object:hover {
+  box-shadow: inset 10000px 0 0 rgba(255, 255, 255, 0.02);
+}
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-gray-700);
+  margin-bottom: 8px;
+  width: 100%;
+  text-align: left;
+  text-align: start;
+}

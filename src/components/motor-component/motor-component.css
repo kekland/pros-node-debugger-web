@@ -1,0 +1,43 @@
+.motor-container {
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+#data {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.title {
+  font-size: 18px;
+  font-weight: 600;
+}
+#brakeMode {
+  background-color: white;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.data-item-with-target {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.data-item-value-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.data-item-description {
+  font-size: 14px;
+  color: var(--color-gray-700);
+}
+
+.data-item-arrow {
+  margin-left: 8px;
+  margin-right: 8px;
+  color: var(--color-gray-700);
+}

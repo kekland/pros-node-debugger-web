@@ -7,54 +7,82 @@
 
 import '@stencil/core';
 
-import '@stencil/router';
-import '@stencil/state-tunnel';
+
 import {
-  MatchResults,
-} from '@stencil/router';
+  IMessageData,
+} from './classes/MessageData';
+import {
+  IMotorDebuggerData,
+} from './classes/MotorData';
 
 
 export namespace Components {
 
-  interface AppHome {}
-  interface AppHomeAttributes extends StencilHTMLAttributes {}
-
-  interface AppProfile {
-    'match': MatchResults;
-  }
-  interface AppProfileAttributes extends StencilHTMLAttributes {
-    'match'?: MatchResults;
-  }
-
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
+
+  interface CardObject {
+    'title': string;
+  }
+  interface CardObjectAttributes extends StencilHTMLAttributes {
+    'title'?: string;
+  }
+
+  interface DataItem {
+    'title': string;
+  }
+  interface DataItemAttributes extends StencilHTMLAttributes {
+    'title'?: string;
+  }
+
+  interface MessagesComponent {
+    'data': IMessageData[];
+  }
+  interface MessagesComponentAttributes extends StencilHTMLAttributes {
+    'data'?: IMessageData[];
+  }
+
+  interface MotorComponent {
+    'data': IMotorDebuggerData;
+  }
+  interface MotorComponentAttributes extends StencilHTMLAttributes {
+    'data'?: IMotorDebuggerData;
+  }
+
+  interface ValueUnitDisplay {
+    'unit': string;
+    'value': any;
+  }
+  interface ValueUnitDisplayAttributes extends StencilHTMLAttributes {
+    'unit'?: string;
+    'value'?: any;
+  }
+
+  interface XComponent {}
+  interface XComponentAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'AppHome': Components.AppHome;
-    'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
+    'CardObject': Components.CardObject;
+    'DataItem': Components.DataItem;
+    'MessagesComponent': Components.MessagesComponent;
+    'MotorComponent': Components.MotorComponent;
+    'ValueUnitDisplay': Components.ValueUnitDisplay;
+    'XComponent': Components.XComponent;
   }
 
   interface StencilIntrinsicElements {
-    'app-home': Components.AppHomeAttributes;
-    'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
+    'card-object': Components.CardObjectAttributes;
+    'data-item': Components.DataItemAttributes;
+    'messages-component': Components.MessagesComponentAttributes;
+    'motor-component': Components.MotorComponentAttributes;
+    'value-unit-display': Components.ValueUnitDisplayAttributes;
+    'x-component': Components.XComponentAttributes;
   }
 
-
-  interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
-  };
-
-  interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {}
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
-  };
 
   interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
   var HTMLAppRootElement: {
@@ -62,16 +90,60 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLCardObjectElement extends Components.CardObject, HTMLStencilElement {}
+  var HTMLCardObjectElement: {
+    prototype: HTMLCardObjectElement;
+    new (): HTMLCardObjectElement;
+  };
+
+  interface HTMLDataItemElement extends Components.DataItem, HTMLStencilElement {}
+  var HTMLDataItemElement: {
+    prototype: HTMLDataItemElement;
+    new (): HTMLDataItemElement;
+  };
+
+  interface HTMLMessagesComponentElement extends Components.MessagesComponent, HTMLStencilElement {}
+  var HTMLMessagesComponentElement: {
+    prototype: HTMLMessagesComponentElement;
+    new (): HTMLMessagesComponentElement;
+  };
+
+  interface HTMLMotorComponentElement extends Components.MotorComponent, HTMLStencilElement {}
+  var HTMLMotorComponentElement: {
+    prototype: HTMLMotorComponentElement;
+    new (): HTMLMotorComponentElement;
+  };
+
+  interface HTMLValueUnitDisplayElement extends Components.ValueUnitDisplay, HTMLStencilElement {}
+  var HTMLValueUnitDisplayElement: {
+    prototype: HTMLValueUnitDisplayElement;
+    new (): HTMLValueUnitDisplayElement;
+  };
+
+  interface HTMLXComponentElement extends Components.XComponent, HTMLStencilElement {}
+  var HTMLXComponentElement: {
+    prototype: HTMLXComponentElement;
+    new (): HTMLXComponentElement;
+  };
+
   interface HTMLElementTagNameMap {
-    'app-home': HTMLAppHomeElement
-    'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
+    'card-object': HTMLCardObjectElement
+    'data-item': HTMLDataItemElement
+    'messages-component': HTMLMessagesComponentElement
+    'motor-component': HTMLMotorComponentElement
+    'value-unit-display': HTMLValueUnitDisplayElement
+    'x-component': HTMLXComponentElement
   }
 
   interface ElementTagNameMap {
-    'app-home': HTMLAppHomeElement;
-    'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
+    'card-object': HTMLCardObjectElement;
+    'data-item': HTMLDataItemElement;
+    'messages-component': HTMLMessagesComponentElement;
+    'motor-component': HTMLMotorComponentElement;
+    'value-unit-display': HTMLValueUnitDisplayElement;
+    'x-component': HTMLXComponentElement;
   }
 
 

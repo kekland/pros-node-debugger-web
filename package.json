@@ -1,5 +1,5 @@
 {
-  "name": "stencil-starter-project-name",
+  "name": "pros-debugger-web",
   "private": true,
   "version": "0.0.1",
   "description": "Stencil App Starter",
@@ -11,7 +11,17 @@
   },
   "dependencies": {
     "@stencil/core": "~0.16.2",
-    "@stencil/router": "~0.3.1"
+    "@stencil/router": "~0.3.1",
+    "bufferutil": "^4.0.1",
+    "moment": "^2.24.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0",
+    "socket.io-client": "^2.2.0",
+    "supports-color": "^6.1.0",
+    "utf-8-validate": "^5.0.2"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/socket.io-client": "^1.4.32"
+  }
 }

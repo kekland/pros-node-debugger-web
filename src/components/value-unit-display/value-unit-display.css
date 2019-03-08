@@ -1,0 +1,10 @@
+.unit {
+  color: var(--color-gray-700);
+  font-size: 18px;
+}
+.value {
+  color: var(--color-gray-100);
+  font-size: 24px;
+  margin-right: 2px;
+  
+}
